@@ -1,0 +1,115 @@
+@import 'vue-select/dist/vue-select.css';
+
+@font-face {
+  font-family: 'SFUIText';
+  src: url('../src/assets/fonts/SFUIText/SFUITextMedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFUIText';
+  src: url('../src/assets/fonts/SFUIText/SFUITextRegular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFProDisplay';
+  src: url('../src/assets/fonts/SFProDisplay/SFProDisplaySemibold.woff2')
+    format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+:root {
+  /* Fonts */
+  --SFUIText: 'SFUIText', sans-serif;
+  --SFProDisplay: 'SFProDisplay', sans-serif;
+
+  /* Colors */
+  --white: 255, 255, 255;
+  --black: 0, 0, 0;
+  --green: 39, 174, 96;
+  --red: 235, 87, 87;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-weight: 400;
+  color: rgb(var(--black));
+  font-family: var(--SFUIText);
+}
+
+.wrapper {
+  max-width: 1500px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin: 0 auto;
+}
+
+.page-title {
+  margin-bottom: 38px;
+
+  & h1 {
+    font-size: 36px;
+    font-family: var(--SFProDisplay);
+    font-weight: 600;
+    margin: 0;
+  }
+}
+
+.v-select {
+  .vs__dropdown-toggle {
+    background: #f2f2f2;
+    border: none;
+    padding: 0 0 8px;
+  }
+
+  .vs__search {
+    margin: 8px 0 0;
+    padding: 0 7px 0 14px;
+    color: rgb(var(--black));
+
+    &::placeholder {
+      font-size: 14px;
+      font-family: var(--SFProDisplay);
+    }
+  }
+
+  .vs__selected {
+    font-size: 14px;
+    font-family: var(--SFProDisplay);
+    margin: 8px 2px 0;
+    padding: 0 0.25em 0 10px;
+  }
+
+  .vs__actions {
+    padding: 10px 21px 0 3px;
+  }
+
+  .vs__open-indicator {
+    fill: rgb(var(--black));
+  }
+
+  .vs__clear {
+    fill: rgb(var(--black));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page-title {
+    & h1 {
+      font-size: 30px;
+    }
+  }
+}
